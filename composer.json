@@ -1,0 +1,62 @@
+{
+    "name": "kkxdev/laravel-truecaller-oauth",
+    "description": "Truecaller OAuth 2.0 (SDK 3.x) server-side login for Laravel",
+    "version": "1.0.0",
+    "keywords": [
+        "laravel",
+        "truecaller",
+        "oauth",
+        "oauth2",
+        "pkce",
+        "login",
+        "authentication"
+    ],
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "kkxdev"
+        }
+    ],
+    "require": {
+        "php": "^8.0|^8.1|^8.2|^8.3|^8.4",
+        "illuminate/support": "^8.0|^9.0|^10.0|^11.0|^12.0",
+        "illuminate/http": "^8.0|^9.0|^10.0|^11.0|^12.0",
+        "guzzlehttp/guzzle": "^7.0.1",
+        "illuminate/cache": "^8.0|^9.0|^10.0|^11.0|^12.0",
+        "psr/log": "^1.0|^2.0|^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5|^10.0|^11.0",
+        "orchestra/testbench": "^6.0|^7.0|^8.0|^9.0|^10.0",
+        "mockery/mockery": "^1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kkxdev\\Truecaller\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kkxdev\\Truecaller\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kkxdev\\Truecaller\\Providers\\TruecallerServiceProvider"
+            ],
+            "aliases": {
+                "Truecaller": "Kkxdev\\Truecaller\\Facades\\Truecaller"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "audit": {
+            "block-insecure": false
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
