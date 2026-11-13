@@ -7,6 +7,7 @@ namespace Kkxdev\Truecaller\Tests;
 use Kkxdev\Truecaller\Exceptions\PhoneUnsupportedException;
 use Kkxdev\Truecaller\Exceptions\ProfileIncompleteException;
 use Kkxdev\Truecaller\Support\PhoneNormaliser;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 /**
  * The normaliser decides whether a returning user is recognised or silently
@@ -152,6 +153,7 @@ class PhoneNormaliserTest extends TestCase
      *
      * @param string|int|null $raw
      */
+    #[DataProvider('missingNumbers')]
     public function testEmptyOrNonNumericPhoneNumberIsRejectedAsMissing($raw): void
     {
         // Distinct from "unsupported": the caller reports these differently,

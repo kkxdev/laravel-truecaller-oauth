@@ -7,6 +7,7 @@ namespace Kkxdev\Truecaller\Tests;
 use Kkxdev\Truecaller\Exceptions\ProfileIncompleteException;
 use Kkxdev\Truecaller\Support\PhoneNormaliser;
 use Kkxdev\Truecaller\Support\ProfileMapper;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 class ProfileMapperTest extends TestCase
 {
@@ -78,6 +79,7 @@ class ProfileMapperTest extends TestCase
     /**
      * @dataProvider unsetGenderSentinels
      */
+    #[DataProvider('unsetGenderSentinels')]
     public function testUnsetGenderSentinelIsMappedToNull(string $sentinel): void
     {
         // Storing the sentinel would record "NotSet" as if it were an answer.
