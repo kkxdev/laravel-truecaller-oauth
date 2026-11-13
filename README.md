@@ -1,6 +1,6 @@
 # laravel-truecaller-oauth
 
-Server-side Truecaller OAuth 2.0 (SDK 3.x) login for Laravel 8–12.
+Server-side Truecaller OAuth 2.0 (SDK 3.x) login for Laravel 8–13.
 
 An app obtains an authorization code from the Truecaller SDK; this package
 exchanges it for a verified identity. What you do with that identity — find a
